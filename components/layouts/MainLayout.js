@@ -3,18 +3,28 @@ import React, { Component, useState, useEffect } from "react";
 export default class MainLayout extends Component {
   render() {
     return (
-      <body>
+      // <>
+      <>
+        <link
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          rel="stylesheet"
+        ></link>
         {this.props.children}
+        <a href="https://icons8.com/icon/78603/ellipse">
+          Ellipse icon by Icons8
+        </a>
         <script src="/fabric.js"></script>
         <script
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
         ></script>
         <script
-          nomodule
+          noModule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
-      </body>
+        <script src="/1315.js"></script>
+      </>
+      // </>
     );
   }
 }

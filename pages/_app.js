@@ -1,6 +1,7 @@
 import React from "react";
 import App, { Container } from "next/app";
 import MainLayout from "../components/layouts/MainLayout";
+import CanvasContextProvider from "../components/includes/CanvasContext";
 import "../styles/main.scss";
 
 class MyApp extends App {
@@ -15,9 +16,11 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <CanvasContextProvider>
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </CanvasContextProvider>
     );
   }
 }
